@@ -33,7 +33,7 @@ RUN export uid=1000 gid=1000 && \
 RUN sed "s/^dialout.*/&developer/" /etc/group -i \
     && sed "s/^root.*/&developer/" /etc/group -i
 
-ENV ARDUINO_IDE_VERSION 2.3.4
+ENV ARDUINO_IDE_VERSION 2.3.7
 RUN wget https://downloads.arduino.cc/arduino-ide/arduino-ide_${ARDUINO_IDE_VERSION}_Linux_64bit.zip
 RUN (mkdir /usr/local/share/arduino-${ARDUINO_IDE_VERSION} && \
      unzip -d /usr/local/share/arduino-${ARDUINO_IDE_VERSION} arduino-ide_${ARDUINO_IDE_VERSION}_Linux_64bit.zip && \
