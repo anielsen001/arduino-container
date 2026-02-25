@@ -39,7 +39,7 @@ RUN (mkdir /usr/local/share/arduino-${ARDUINO_IDE_VERSION} && \
      unzip -d /usr/local/share/arduino-${ARDUINO_IDE_VERSION} arduino-ide_${ARDUINO_IDE_VERSION}_Linux_64bit.zip && \
      ln -s /usr/local/share/arduino-${ARDUINO_IDE_VERSION} /usr/local/share/arduino && \
      ln -s /usr/local/share/arduino-${ARDUINO_IDE_VERSION}/arduino-ide /usr/local/bin/arduino-ide && \
-     chmod 04755 /usr/local/share/arduino-2.3.4/chrome-sandbox)
+     chmod 04755 /usr/local/share/arduino-${ARDUINO_IDE_VERSION}/chrome-sandbox)
 
 ENV DISPLAY :1.0
 
