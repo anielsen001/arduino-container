@@ -1,0 +1,17 @@
+21:13 $ podman compose run arduino
+>>>> Executing external compose provider "/usr/bin/podman-compose". Please refer to the documentation for details. <<<<
+
+podman-compose version: 1.0.6
+['podman', '--version', '']
+using podman version: 4.9.3
+podman run --name=arduino-container_arduino_tmp47699 -i --label io.podman.compose.config-hash=fcc81f6d589b9a5719728941a15fad4a3bedbf9a2155a7af9c4984423ae586c8 --label io.podman.compose.project=arduino-container --label io.podman.compose.version=1.0.6 --label PODMAN_SYSTEMD_UNIT=podman-compose@arduino-container.service --label com.docker.compose.project=arduino-container --label com.docker.compose.project.working_dir=/home/apn/proj/arduino/arduino-container --label com.docker.compose.project.config_files=compose.yml --label com.docker.compose.container-number=1 --label com.docker.compose.service=arduino -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /data:/data -v /home/apn/proj/arduino/arduino-container:/opt/project --network host --userns keep-id -w /opt/project --tty --privileged --init ghcr.io/anielsen001/arduino:latest /bin/bash
+ubuntu@fluff:/opt/project$ ls      
+'#come#'   Arduino   Containerfile   LICENSE   README.md   arduino.sh   compose.yml   compose.yml~
+ubuntu@fluff:/opt/project$ cd /home/ubuntu
+ubuntu@fluff:~$ ls
+ubuntu@fluff:~$ ln -s /opt/project/Arduino Arduino
+ubuntu@fluff:~$ ls
+Arduino
+ubuntu@fluff:~$ /opt/arduino/arduino-1.8.19/arduino
+Picked up JAVA_TOOL_OPTIONS: 
+
