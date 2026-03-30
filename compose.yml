@@ -3,7 +3,7 @@ services:
     init: true
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Containerfile
     environment:
       DISPLAY:
     image: ghcr.io/anielsen001/arduino:latest
@@ -12,8 +12,11 @@ services:
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
       - "/data:/data"
       - "$PWD:/opt/project"
+      #- "/home/ubuntu/Arduino:/opt/project/Arduino"
     network_mode: "host"
+    userns_mode: keep-id
     privileged: true
     command:
       - /bin/bash
     working_dir: /opt/project
+    
