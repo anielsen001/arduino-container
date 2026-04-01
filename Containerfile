@@ -52,7 +52,13 @@ WORKDIR /opt/arduino/arduino-1.8.19
 #      ln -s /usr/local/share/arduino-${ARDUINO_IDE_VERSION}/arduino-ide /usr/local/bin/arduino-ide && \
 #      chmod 04755 /usr/local/share/arduino-${ARDUINO_IDE_VERSION}/chrome-sandbox)
 
-ENV DISPLAY :1.0
+#ENV DISPLAY :1.0
 ENV ARDUINO_DIRECTORIES_USER /opt/project
 
-
+RUN ln -s /opt/project/Arduino /root/Arduino
+RUN mkdir -p /home/ubuntu/Arduino && \
+    ln -s /opt/project/Arduino /home/ubuntu/Arduino
+    
+RUN ln -s /opt/project/.arduino15 /root/.arduino15
+RUN mkdir -p /home/ubuntu/.arduino15 && \
+    ln -s /opt/project/.arduino16 /home/ubuntu/.arduino15

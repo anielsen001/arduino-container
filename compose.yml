@@ -13,10 +13,13 @@ services:
       - "/data:/data"
       - "$PWD:/opt/project"
       #- "/home/ubuntu/Arduino:/opt/project/Arduino"
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
     network_mode: "host"
-    userns_mode: keep-id
+    #userns_mode: keep-id
     privileged: true
     command:
       - /bin/bash
     working_dir: /opt/project
+    
     
