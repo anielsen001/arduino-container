@@ -1,3 +1,10 @@
+In this directory create these directories that will hold Arduino specific files and persist from docker instance restarts.
+
+```bash
+mkdir -p ./Arduino
+mkdir -p ./.arduino15
+```
+
 Dockerized Arduino IDE
 ======================
 
